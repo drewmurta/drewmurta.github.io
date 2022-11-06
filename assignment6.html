@@ -27,17 +27,6 @@
       <div id=changeText>
       Here is some text.
       </div><br><br><br>
-<script>
-function myFunction() {
-  var checkBox = document.getElementById("myCheck");
-  var text = document.getElementById("text");
-  if (checkBox.checked == true){
-    text.style.display = "block";
-  } else {
-     text.style.display = "none";
-  }
-}
-</script>
 
   <label for="myCheck">I like my bday:</label> 
 <input type="checkbox" id="bday1" onclick="myFunction()">
@@ -54,7 +43,17 @@ function myFunction() {
 
 <p id="text" style="display:none">Checkbox is CHECKED!</p><br>
 
-
+<script>
+function myFunction() {
+  var checkBox = document.getElementById("bday2");
+  var text = document.getElementById("text");
+  if (checkBox.checked == true){
+    text.style.display = "block";
+  } else {
+     text.style.display = "none";
+  }
+}
+</script>
 
  <input type=reset value="clear entries">
 </form>
