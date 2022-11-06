@@ -3,17 +3,6 @@
       <title>Birthday</title>
 <h2>Birthday!</h2>
       <script>
-
-function myFunction() {
-  var checkBox = document.getElementById("myCheck");
-  var text = document.getElementById("text");
-  if (checkBox.checked == true){
-    text.style.display = "block";
-  } else {
-     text.style.display = "none";
-  }
-}
-
          function glue()
          {
            document.querySelector("#bday").value = 
@@ -38,7 +27,17 @@ function myFunction() {
       <div id=changeText>
       Here is some text.
       </div><br><br><br>
-
+<script>
+function myFunction() {
+  var checkBox = document.getElementById("myCheck");
+  var text = document.getElementById("text");
+  if (checkBox.checked == true){
+    text.style.display = "block";
+  } else {
+     text.style.display = "none";
+  }
+}
+</script>
 
   <label for="myCheck">I like my bday:</label> 
 <input type="checkbox" id="bday1" onclick="myFunction()">
