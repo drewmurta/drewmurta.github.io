@@ -90,8 +90,30 @@ document.querySelector('body').style.backgroundColor = "yellow";
                 <button type="submit" name="submit" class="btn btn-success" onClick="Calc()">Submit</button>
             </div>
 
-        </div>
-    </div>
+  <script>
+ function doSum()
+ {
+ var sum=0;
+ var start = parseInt(document.querySelector("#v1").value );
+ var end = parseInt(document.querySelector("#v2").value );
+ for (var i=start; i<=end; i++) {
+ sum += i;
+ }
+
+document.querySelector("#sumHere").innerHTML = "Your sum is: "+sum;
+ }
+ </script>
+
+<form>
+Number 1 <input
+type=text id="v1"><br>
+Number 2 <input
+type=text id="v2"><br>
+ <input type=button value="Sum"
+onclick="doSum();">
+ <div id="sumHere">
+ Your sum is:
+ </div>
 
 
  </body>
