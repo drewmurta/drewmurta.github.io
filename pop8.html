@@ -94,8 +94,8 @@ document.querySelector('body').style.backgroundColor = "yellow";
  function doSum()
  {
  var sum=0;
- var start = parseInt(document.querySelector("#v1").value );
- var end = parseInt(document.querySelector("#v2").value );
+ var start = parseInt(document.querySelector("#n1").value );
+ var end = parseInt(document.querySelector("#n2").value );
  for (var i=start; i<=end; i++) {
  sum += i;
  }
@@ -106,9 +106,9 @@ document.querySelector("#sumHere").innerHTML = "Your sum is: "+sum;
 
 <form>
 First Number <input
-type=text id="v1"><br>
+type=text id="n1"><br>
 Second Number <input
-type=text id="v2"><br>
+type=text id="n2"><br>
  <input type=button value="Start the Sum"
 onclick="doSum();">
  <div id="sumHere">
