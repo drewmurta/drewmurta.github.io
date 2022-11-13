@@ -38,7 +38,14 @@ document.querySelector('body').style.backgroundColor = "yellow";
 
 <h2> Calculator </h2>
 
-  <script>
+
+    <head>
+        
+      
+        <meta charset="windows-1252">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script>
             
             function calc()
             {
@@ -46,19 +53,23 @@ document.querySelector('body').style.backgroundColor = "yellow";
                 var n2 = parseFloat(document.getElementById('n2').value);
                 
                 var oper = document.getElementById('operators').value;
- if(oper === '+')
+                
+                if(oper === '+')
                 {
                     document.getElementById('result').value = n1+n2;
                 }
- if(oper === '-')
+                
+                if(oper === '-')
                 {
                     document.getElementById('result').value = n1-n2;
                 }
-if(oper === '/')
+                
+                if(oper === '/')
                 {
                     document.getElementById('result').value = n1/n2;
                 }
-if(oper === 'X')
+                
+                if(oper === 'X')
                 {
                     document.getElementById('result').value = n1*n2;
                 }
@@ -68,7 +79,7 @@ if(oper === 'X')
         
     </head>
     <body>
-      
+        
         <input type="text" id="n1"/><br/><br/>
         <input type="text" id="n2"/><br/><br/>
         
@@ -80,9 +91,10 @@ if(oper === 'X')
         </select>
         
         <button onclick="calc();">=</button>
-        <input type="text" id="result"/><br><br>
+        <input type="text" id="result"/>
         
- 
-</form>
+    </body>
+</html>
+
  </body>
 </html>
