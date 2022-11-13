@@ -38,56 +38,62 @@ document.querySelector('body').style.backgroundColor = "yellow";
 
 <h2> Calculator </h2>
         
-        <script>
+  <script>
+        function Calc(){
+            var val1 = document.getElementById("val1").value;
+            var val2 = document.getElementById("val2").value;
+            var opt = document.getElementById("opt").value;
             
-            function calc()
-            {
-                var n1 = parseFloat(document.getElementById('n1').value);
-                var n2 = parseFloat(document.getElementById('n2').value);
-                
-                var oper = document.getElementById('operators').value;
-                
-                if(oper === '+')
-                {
-                    document.getElementById('result').value = n1+n2;
-                }
-                
-                if(oper === '-')
-                {
-                    document.getElementById('result').value = n1-n2;
-                }
-                
-                if(oper === '/')
-                {
-                    document.getElementById('result').value = n1/n2;
-                }
-                
-                if(oper === 'X')
-                {
-                    document.getElementById('result').value = n1*n2;
-                }
-            }
-            
-        </script>
-        
-    </head>
-    <body>
-        
-        <input type="text" id="n1"/><br/><br/>
-        <input type="text" id="n2"/><br/><br/>
-        
-        <select id="operators">
-            <option value="+">+</option>
-            <option value="-">-</option>
-            <option value="/">/</option>
-            <option value="X">X</option>
-        </select>
-        
-        <button onclick="calc();">=</button>
-        <input type="text" id="result"/>
-        
-    </body>
-</html>
+            var ans = eval(val1 + opt + val2);
+            document.getElementById("ans").value = ans;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h3>Addition, Subtraction, Multiplication &amp; Division using JavaScript!</h3>
+            <hr />
+            <div class="col-lg-1">
+                <label for="desc">Value 1:</label> 
+            </div>
+            <div class="col-lg-1">
+                <input type="number" class="form-control" id="val1" value="5" required>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-lg-1">
+                <label for="desc">Value 2:</label> 
+            </div>
+            <div class="col-lg-1">
+                <input type="number" class="form-control" id="val2" value="2" required>
+            </div>
+            <div class="col-lg-1">
+                <select id="opt" class="form-control">
+                    <option>+</option>
+                    <option>-</option>
+                    <option>*</option>
+                    <option>/</option>
+                </select>
+            </div>
+
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-lg-1">
+                <label for="desc">Answer:</label> 
+            </div>
+            <div class="col-lg-1">
+                <input type="text" class="form-control" id="ans" readonly>
+            </div>
+            <div class="col-lg-1">
+                <button type="submit" name="submit" class="btn btn-success" onClick="Calc()">Submit</button>
+            </div>
+
+        </div>
+    </div>
+
 
  </body>
 </html>
