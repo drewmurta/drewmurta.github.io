@@ -1,0 +1,98 @@
+<html>
+
+ <head>
+ <title>Assignment7</title>
+<h2>Color</h2>
+ <script>
+ function red()
+ {
+document.querySelector('body').style.backgroundColor = "red";
+ }
+ function blue()
+ {
+document.querySelector('body').style.backgroundColor = "blue";
+ }
+ function green()
+ {
+document.querySelector('body').style.backgroundColor = "green";
+ }
+ function yellow()
+ {
+document.querySelector('body').style.backgroundColor = "yellow";
+ }
+ </script>
+
+ </head>
+ <body>
+ <form>
+ <input type=button value="red"
+ onclick="red();">
+ <input type=button value="blue"
+ onclick="blue();">
+ <input type=button value="green"
+ onclick="green();">
+ <input type=button value="yellow"
+ onclick="yellow();">
+
+
+
+<h2> Calculator </h2>
+        
+  <script>
+        function Calc(){
+            var val1 = document.getElementById("val1").value;
+            var val2 = document.getElementById("val2").value;
+            var opt = document.getElementById("opt").value;
+            
+            var ans = eval(val1 + opt + val2);
+            document.getElementById("ans").value = ans;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+           
+            <div class="col-lg-1">
+                <label for="desc">Value 1:</label> 
+            </div>
+            <div class="col-lg-1">
+                <input type="number" class="form-control" id="val1" value="5" required>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-lg-1">
+                <label for="desc">Value 2:</label> 
+            </div>
+            <div class="col-lg-1">
+                <input type="number" class="form-control" id="val2" value="2" required>
+            </div>
+            <div class="col-lg-1">
+                <select id="opt" class="form-control">
+                    <option>+</option>
+                    <option>-</option>
+                    <option>*</option>
+                    <option>/</option>
+                </select>
+            </div>
+
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-lg-1">
+                <label for="desc">Answer:</label> 
+            </div>
+            <div class="col-lg-1">
+                <input type="text" class="form-control" id="ans" readonly>
+            </div>
+            <div class="col-lg-1">
+                <button type="submit" name="submit" class="btn btn-success" onClick="Calc()">Submit</button>
+            </div>
+
+        </div>
+    </div>
+
+
+ </body>
+</html>
